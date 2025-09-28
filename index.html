@@ -1,168 +1,180 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My English Narrative Blog</title>
+  <title>My English Portfolio</title>
   <style>
-        body {
-      font-family: 'Georgia', serif;
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #fdfcfb;
+      background-color: #f0f2f5;
+      scroll-behavior: smooth;
       color: #333;
-      line-height: 1.6;
     }
 
+    /* Header */
     header {
-      background: linear-gradient(135deg, #89f7fe, #66a6ff);
-      color: white;
+      background-color: #4a90e2;
+      color: #fff;
       text-align: center;
-      padding: 2rem 1rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 60px 20px 40px 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
-
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3em;
+    }
+    header p {
+      margin: 10px 0 0 0;
+      font-size: 1.2em;
+      font-weight: 400;
+      color: #e0eafc;
     }
 
+    /* Navigation Bar */
     nav {
-      margin-top: 1rem;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      transition: opacity 0.3s ease;
-    }
-
-    nav a:hover {
-      opacity: 0.7;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    section {
-      background: white;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      border-radius: 12px;
+      position: sticky;
+      top: 0;
+      background-color: #4a90e2;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+    .nav-container {
+      display: flex;
+      gap: 80px; /* proper spacing between nav links */
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffd700;
     }
 
+    /* Section Styles */
+    section {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 40px 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
     section h2 {
+      color: #4a90e2;
       margin-top: 0;
-      color: #444;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
     }
-
-    /* --------- Comment Section --------- */
-    #comments {
-      margin-top: 2rem;
+    section p {
+      line-height: 1.6;
+      font-size: 1.1em;
     }
-
-    #comments h3 {
-      margin-bottom: 0.5rem;
-    }
-
-    #commentForm textarea {
-      width: 100%;
-      height: 80px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-family: inherit;
-      margin-bottom: 0.5rem;
-    }
-
-    #commentForm button {
-      background: #66a6ff;
-      color: white;
+    button {
+      padding: 12px 25px;
+      background-color: #4a90e2;
+      color: #fff;
       border: none;
-      padding: 0.5rem 1rem;
       border-radius: 8px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #357ABD;
     }
 
-    #commentForm button:hover {
-      background: #4a90e2;
+    /* Full story overlay */
+    #story-full {
+      display: none;
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 40px 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
-    .comment {
-      background: #f0f7ff;
-      padding: 0.7rem;
-      border-radius: 8px;
-      margin-top: 0.5rem;
-    }
-
+    /* Footer */
     footer {
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-      background: #f3f3f3;
-      color: #777;
-      font-size: 0.9rem;
+      padding: 20px;
+      color: #888;
+      font-size: 0.9em;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>My English Portifolio</h1>
-    <h1>By Cyrus Jacob 10B2</h1>
-    <nav>
-      <a href="#My-Narrative-Story">My Narrative Story</a>
-      <a href="#comments">Comments</a>
-    </nav>
+    <h1>My English Portfolio</h1>
+    <p>By Cyrus Jacob 10B2</p>
   </header>
 
-  <main>
-  
-    <section id="My-Narrative-Story">
-      <h2>My Narrative Story :)</h2>
-      <p>[Your first draft goes here...]</p>
-    </section>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-container">
+      <a href="#story-preview">Story</a>
+      <a href="#work1">Work 1</a>
+      <a href="#work2">Work 2</a>
+    </div>
+  </nav>
 
-        <section id="comments">
-      <h3>&nbsp;</h3>
-		<h3>Leave a Comment</h3>
-      <form id="commentForm">
-        <textarea placeholder="Write your comment here..." cols="20" name="S1" rows="1"></textarea><br>
-        <button type="submit">Post Comment</button>
-      </form>
-      <div id="commentList"></div>
-    </section>
-  </main>
+  <!-- Story Preview Section -->
+  <section id="story-preview">
+    <h2>My Narrative Story</h2>
+    <p id="story-snippet">
+      Once upon a time, in a land far away... (preview of the story)
+    </p>
+    <button onclick="showFullStory()">Read More</button>
+  </section>
+
+  <!-- Full Story Section -->
+  <section id="story-full">
+    <h2>My Narrative Story</h2>
+    <p id="full-story-text">
+      Once upon a time, in a land far away, there lived a brave young explorer who dreamed of discovering unknown lands. Day after day, the explorer prepared for the adventure, facing challenges and learning new skills. Along the way, friends joined, secrets were revealed, and the journey became more than just a quest—it became a story of courage, friendship, and discovery. (full story continues...)
+    </p>
+    <button onclick="backToMain()">Back</button>
+  </section>
+
+  <!-- Example Future Work Sections -->
+  <section id="work1">
+    <h2>Work Section 1</h2>
+    <p>Add your next piece of work here.</p>
+  </section>
+
+  <section id="work2">
+    <h2>Work Section 2</h2>
+    <p>Another place to showcase your creations.</p>
+  </section>
 
   <footer>
-    <p>© 2025 My English Narrative Blog</p>
+    &copy; 2025 My English Portfolio
   </footer>
 
   <script>
-    // Simple Comment System
-    const form = document.getElementById('commentForm');
-    const commentList = document.getElementById('commentList');
+    function showFullStory() {
+      document.getElementById('story-preview').style.display = 'none';
+      document.getElementById('story-full').style.display = 'block';
+      window.scrollTo(0, 0); // scroll to top
+    }
 
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const textarea = form.querySelector('textarea');
-      const commentText = textarea.value.trim();
-      if(commentText !== "") {
-        const newComment = document.createElement('div');
-        newComment.classList.add('comment');
-        newComment.textContent = commentText;
-        commentList.appendChild(newComment);
-        textarea.value = "";
-      }
-    });
+    function backToMain() {
+      document.getElementById('story-full').style.display = 'none';
+      document.getElementById('story-preview').style.display = 'block';
+      window.scrollTo(0, 0); // scroll to top
+    }
   </script>
+
 </body>
 </html>
